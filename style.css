@@ -1,8 +1,107 @@
-body {
+*{
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
-  background-color: #f5f5f5f5;
+  padding: 0px;
+  color: red;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0c1123;
+}
+
+.card{
+  position: relative;
+  background: #131b33;
+  width: 100%;
+  height: 99%;
+  overflow: hidden;
+  
+}
+
+.card span:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #17f3fd);
+  animation: animate_one 2s linear infinite;
+}
+
+@keyframes animate_one{
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+.card span:nth-child(2){
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #17f3fd);
+  animation: animate_two 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate_two{
+  0%
+  {
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(100%);
+  }
+}
+
+.card span:nth-child(3){
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left, transparent, #17f3fd);
+  animation: animate_three 2s linear infinite;
+}
+
+@keyframes animate_three{
+  0%
+  {
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+.card span:nth-child(4){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, #17f3fd);
+  animation: animate_four 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate_four{
+  0%
+  {
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
 }
 
 h1 {
@@ -16,8 +115,9 @@ h1 {
 
 label {
   display: inline-block;
-  width: 120px;
+  width: 85px;
   font-weight: bold;
+  margin: 10px;
 }
 
 input[type="number"] {
