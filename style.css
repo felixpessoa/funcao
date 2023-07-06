@@ -111,6 +111,9 @@ h1 {
 
 .input-group {
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
@@ -121,7 +124,7 @@ label {
 }
 
 input[type="number"] {
-  width: 200px;
+  width: 142px;
   padding: 5px;
   border-radius: 5px;
 }
@@ -135,6 +138,9 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button:hover {
